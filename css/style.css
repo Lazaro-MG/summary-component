@@ -1,0 +1,203 @@
+:root{
+    /*Colores*/
+    --lightRed: hsl(0, 100%, 67%);
+    --orangeyYellow: hsl(39, 100%, 56%);
+    --greenTeal: hsl(166, 100%, 37%);
+    --cobaltBlue: hsl(234, 85%, 45%);
+
+    /*Backgrounds*/
+    --slateBlue: hsl(252, 100%, 67%);
+    --royalBlue: hsl(241, 81%, 54%);
+    --violetBlue: hsla(256, 72%, 46%, 1);
+    --persianBlue: hsl(241, 72%, 46%);
+
+    /*Neutrales*/
+    --white: hsl(0, 0%, 100%);
+    --paleBlue: hsl(221, 100%, 96%);
+    --lightLavender: hsl(241, 100%, 89%);
+    --grayBlue: hsl(224, 30%, 27%);
+
+    /*Fuente*/
+    --fuente: "Hanken Grotesk", serif;
+}
+/*Hacks*/
+html{
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+*, *:before, *::after{
+    box-sizing: inherit;
+}
+body{
+    font-size: 16px;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--fuente);
+}
+main{
+    font-size: 1.8rem;
+    width: 375px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+@media (min-width: 1440px) {
+    body{
+        background-color: var(--paleBlue);
+    }
+    main{
+        flex-direction: row;
+        width: 1000px;
+        align-items: center;
+        justify-content: center;
+    }
+}
+.resultado{
+    height: 45vh;
+    background: linear-gradient(to top, var(--royalBlue) 0%, var(--slateBlue) 100%);
+    border-radius: 0 0 2.5rem 2.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+@media (min-width: 1440px) {
+    .resultado{
+        width: 30%;
+        height: 55vh;
+        border-radius: 1.5rem;
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .resultado h1{
+        margin: 0 0 3rem 0;
+    }
+    .resultado .resultado__puntos{
+        width: 15rem;
+        height: 15rem;
+    }
+    .resumen{
+        width: 35%;
+        height: 50vh;
+        background-color: var(--white);
+        border-radius: 0 1.5rem 1.5rem 0;
+        margin-left: -2rem;
+        z-index: 1;
+        box-shadow: 10px 10px 8px -7px rgba(168,161,168,1);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .resumen h3{
+        font-size: 1.4rem;
+        margin: 2.8rem 0 1.5rem 3rem;
+        align-self: start;
+    }
+    .elemento{
+        padding: .5rem;
+        font-size: .8rem;
+        width: 80%;
+    }
+    .resumen button{
+        width: 80%;
+    }
+}
+.resultado h1{
+    color: var(--paleBlue);
+    font-size: 1.6rem;
+}
+.resultado__puntos{
+    background: linear-gradient(to top, var(--slateBlue) 0%, var(--royalBlue) 100%);
+    width: 13rem;
+    height: 13rem;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.resultado__puntos .puntaje{
+    font-size: 5.5rem;
+    color: var(--white);
+    font-weight: bold;
+}
+.resultado__puntos .total{
+    font-size: 1.2rem;
+    color: var(--lightLavender);
+}
+.resultado__mensaje__titulo{
+    font-size: 1.9rem;
+    font-weight: bold;
+    color: var(--white);
+}
+.resultado__mensaje__texto{
+    padding: 0 2.5rem;
+    color: var(--lightLavender);
+    text-align: center;
+    margin: 0;
+}
+.resumen{
+    padding: 0 2rem;
+    height: 55vh;
+}
+.resumen h3{
+    font-size: 1.8rem;
+}
+.elemento{
+    border-radius: 1rem;
+    padding: 1.5rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+.categoria{
+    margin: 0;
+    display: flex;
+}
+.categoria img{
+    margin-right: 1rem;
+}
+.puntos{
+    margin: 0;
+}
+.puntos .obtenidos{
+    color: var(--grayBlue);
+}
+.puntos .total{
+    color: var(--lightLavender);
+}
+.rojo{
+    color: hsl(0, 100%, 67%);
+    background-color: hsla(0, 100%, 67% , 8%);
+}
+.amarillo{
+    color: hsl(39, 100%, 56%);
+    background-color: hsla(39, 100%, 56%, 8%);
+}
+.verde{
+    color: hsl(166, 100%, 37%);
+    background-color: hsla(166, 100%, 37%, 8%);
+}
+.azul{
+    color: hsl(241, 81%, 54%);
+    background-color: hsla(241, 81%, 54%, 8%);
+}
+button{
+    border: none;
+    width: 100%;
+    padding: 1.5rem;
+    margin-top: 1rem;
+    background-color: var(--grayBlue);
+    color: var(--white);
+    border-radius: 3rem;
+    cursor: pointer;
+}
+button:hover{
+    background: linear-gradient(to top, var(--royalBlue) 0%, var(--slateBlue) 100%);
+}
